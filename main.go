@@ -9,9 +9,11 @@ import (
 func main() {
 	adapter, err := wintun.CreateAdapter("MyWintun", "MyWintun", nil)
 	if err != nil {
+		fmt.Println(err)
 		fmt.Println("nil")
 		fmt.Println("lalala")
 		log.Fatalf("Ошибка создание адаптера : %v", err)
+		fmt.Println(err)
 	}
 	log.Printf("Адаптер создан : %v", adapter)
 }
