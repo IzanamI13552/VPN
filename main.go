@@ -11,6 +11,7 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 		log.Fatalf("Ошибка создание адаптера : %v", err)
+		fmt.Println(err)
 	}
 	log.Printf("Адаптер создан : %v", adapter)
 }
