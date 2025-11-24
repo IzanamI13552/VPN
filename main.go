@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"golang.zx2c4.com/wintun"
 	"log"
 )
@@ -9,11 +8,12 @@ import (
 func main() {
 	adapter, err := wintun.CreateAdapter("MyWintun", "MyWintun", nil)
 	if err != nil {
-		fmt.Println(err)
-		fmt.Println("nil")
-		fmt.Println("lalala")
 		log.Fatalf("Ошибка создание адаптера : %v", err)
-		fmt.Println(err)
 	}
 	log.Printf("Адаптер создан : %v", adapter)
+	miltiplay(5)
+}
+
+func miltiplay(num int) int {
+	return num * num
 }
